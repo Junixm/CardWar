@@ -9,11 +9,7 @@ import SwiftUI
 
 struct TitleScreen: View {
     
-    @State var playerCard = "back"
-    @State var cpuCard = "back"
-    
-    @State var playerScore = 0
-    @State var cpuScore = 0
+    @StateObject var model = GameModel()
     
     var body: some View {
         
@@ -30,16 +26,16 @@ struct TitleScreen: View {
                 
                 HStack {
                     Spacer()
-                    Image(playerCard)
+                    Image(model.playerCard)
                     Spacer()
-                    Image(cpuCard)
+                    Image(model.cpuCard)
                     Spacer()
                 }
                 
                 Spacer()
                 
                 Button {
-                    deal()
+                    model.deal()
                 } label: {
                     Image("button")
                 }
@@ -53,7 +49,7 @@ struct TitleScreen: View {
                         Text("Player")
                             .font(.headline)
                             .padding(.bottom, 10.0)
-                        Text(String(playerScore))
+                        Text(String(model.playerScore))
                             .font(.largeTitle)
                     }
                     Spacer()
@@ -61,7 +57,7 @@ struct TitleScreen: View {
                         Text("CPU")
                             .font(.headline)
                             .padding(.bottom, 10.0)
-                        Text(String(cpuScore))
+                        Text(String(model.cpuScore))
                             .font(.largeTitle)
                     }
                     Spacer()
@@ -70,21 +66,6 @@ struct TitleScreen: View {
                 
                 Spacer()
             }
-        }
-    }
-    
-    func deal() {
-        // randomize card and update scores
-        let a = Int.random(in: 2...14)
-        let b = Int.random(in: 2...14)
-        
-        playerCard = "card" + String(a)
-        cpuCard = "card" + String(b)
-        
-        if a > b {
-            playerScore += 1
-        } else if a < b {
-            cpuScore += 1
         }
     }
 }
