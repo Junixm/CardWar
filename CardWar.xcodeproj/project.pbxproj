@@ -23,6 +23,16 @@
 			path = CardWar;
 			sourceTree = "<group>";
 		};
+		BFBED0E82DBE7A8600D19FBA /* Model */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFBED0E92DBE7AA400D19FBA /* Assets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +49,8 @@
 		BFBECF4C2DBD377400D19FBA = {
 			isa = PBXGroup;
 			children = (
+				BFBED0E92DBE7AA400D19FBA /* Assets */,
+				BFBED0E82DBE7A8600D19FBA /* Model */,
 				BFBECF9C2DBD725B00D19FBA /* .gitignore */,
 				BFBECF972DBD6D4700D19FBA /* Readme.md */,
 				BFBECF572DBD377400D19FBA /* CardWar */,
@@ -71,6 +83,8 @@
 			);
 			fileSystemSynchronizedGroups = (
 				BFBECF572DBD377400D19FBA /* CardWar */,
+				BFBED0E82DBE7A8600D19FBA /* Model */,
+				BFBED0E92DBE7AA400D19FBA /* Assets */,
 			);
 			name = CardWar;
 			packageProductDependencies = (

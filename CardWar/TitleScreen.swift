@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct TitleScreen: View {
-    
     @StateObject var model = GameModel()
     
     var body: some View {
-        
         ZStack {
             Image("background-plain")
                 .resizable()
@@ -39,12 +37,12 @@ struct TitleScreen: View {
                 } label: {
                     Image("button")
                 }
-                .foregroundColor(.white)
                 
                 Spacer()
                 
                 HStack {
                     Spacer()
+                    
                     VStack {
                         Text("Player")
                             .font(.headline)
@@ -52,7 +50,9 @@ struct TitleScreen: View {
                         Text(String(model.playerScore))
                             .font(.largeTitle)
                     }
+                    
                     Spacer()
+                    
                     VStack {
                         Text("CPU")
                             .font(.headline)
@@ -60,6 +60,7 @@ struct TitleScreen: View {
                         Text(String(model.cpuScore))
                             .font(.largeTitle)
                     }
+                    
                     Spacer()
                 }
                 .foregroundColor(.white)
